@@ -11,19 +11,20 @@ public class Cars {
     return cars;
   }
 
-  public Cars(int count) {
-    this.cars = makeCars(count);
+  public Cars(String input) {
+    this.cars = makeCars(input);
   }
 
   public Cars(List<Car> cars) {
     this.cars = cars;
   }
 
-  public static List<Car> makeCars(int count) {
+  public static List<Car> makeCars(String input) {
+    String[] names = input.split(",");
     List<Car> cars = new ArrayList<>();
 
-    for (int i = 1; i <= count; i++) {
-      cars.add(new Car(String.valueOf(i)));
+    for (String name : names) {
+      cars.add(new Car(name));
     }
     return cars;
   }

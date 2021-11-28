@@ -16,5 +16,6 @@ public class OutputView {
 
   public void printResults(Results results) {
     results.getResults().forEach(Result::printResult);
+    System.out.println(results.getWinners(results) + "가 최종 우승했습니다.");
   }
 }

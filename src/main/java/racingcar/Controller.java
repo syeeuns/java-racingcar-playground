@@ -15,8 +15,8 @@ public class Controller {
     return CONTROLLER;
   }
 
-  public Results play(int count, int times) {
-    Cars cars = new Cars(count);
+  public Results play(String input, int times) {
+    Cars cars = new Cars(input);
     List<Result> resultList = new ArrayList<>();
 
     for (int i = 0; i < times; i++) {

@@ -11,12 +11,12 @@ public class RacingCarApplication {
     OutputView outputView = OutputView.getInstance();
 
     inputview.countInput();
-    int count = inputview.input();
+    String input = inputview.stringInput();
 
     inputview.timesInput();
     int times = inputview.input();
 
-    Results results = controller.play(count, times);
+    Results results = controller.play(input, times);
 
     outputView.printResults(results);
   }

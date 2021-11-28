@@ -13,4 +13,8 @@ public class Results {
   public Results(List<Result> resultList) {
     this.results = resultList;
   }
+
+  public String getWinners(Results gameResults) {
+    return gameResults.getResults().get(results.size() - 1).findWinners();
+  }
 }
