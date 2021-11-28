@@ -1,4 +1,4 @@
-package StringAddCalculator;
+package stringaddcalculator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -35,9 +35,15 @@ public class StringAddCalculatorTest {
   }
 
   @Test
-  void splitAndSum_custom() throws Exception {
+  void splitAndSum_custom1() throws Exception {
     int result = StringAddCalculator.splitAndSum("//;\n1;2;3");
     assertThat(result).isEqualTo(6);
+  }
+
+  @Test
+  void splitAndSum_custom2() throws Exception {
+    assertThatThrownBy(() -> StringAddCalculator.splitAndSum("//;\n-1,2,3"))
+        .isInstanceOf(RuntimeException.class);
   }
 
   @Test
